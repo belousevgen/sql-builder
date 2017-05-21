@@ -1,1 +1,1 @@
-[demo](http://polygonweb.github.io/sql-builder)
+[demo](https://polygonweb.github.io/sql-builder/index.html)
