@@ -91,7 +91,27 @@ body {
 
 .btn-primary {
     background-color: #3ea8de;
+    border: 0;
 }
+
+    .btn-primary:hover {
+        background-color: #4cb2e5;
+    }
+
+    .btn-primary:active,
+    .btn-primary:active:hover,
+    .btn-primary.active:hover,
+    .open > .dropdown-toggle.btn-primary:hover,
+    .btn-primary:active:focus,
+    .btn-primary.active:focus,
+    .open > .dropdown-toggle.btn-primary:focus,
+    .btn-primary:active.focus,
+    .btn-primary.active.focus,
+    .open > .dropdown-toggle.btn-primary.focus {
+        background-color: #3289c3;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
 
 
 /**
@@ -949,19 +969,35 @@ body {
 
                 .auth-social-cell .btn {
                     display: block;
-                    padding: 12px 18px 11px;
+                    padding: 13px 18px 12px;
                     text-align: center;
                     color: #fff;
                     transition: 0.2s;
                 }
 
-                .auth-social-cell .gl { background-color: #e54848; }
-                .auth-social-cell .fb { background-color: #4b7bc6; }
-                .auth-social-cell .ms { background-color: #3ea8de; }
-
-                .auth-social-cell .btn:hover {
-                    box-shadow: 0 0 0 99px rgba(0, 0, 0, 0.2) inset;
+                .auth-social-cell .gl {
+                    background-color: #e54848;
                 }
+
+                    .auth-social-cell .gl:hover {
+                        background-color: #f25353;
+                    }
+
+                    .auth-social-cell .gl:active {
+                        background-color: #d63a3a;
+                    }
+
+                .auth-social-cell .fb {
+                    background-color: #4b7bc6;
+                }
+
+                    .auth-social-cell .fb:hover {
+                        background-color: #5286d1;
+                    }
+
+                    .auth-social-cell .fb:active {
+                        background-color: #3867b2;
+                    }
 
      .auth-foot {
         display: table-row;
