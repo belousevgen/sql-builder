@@ -62,7 +62,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 /**
  * Sign-in & Sign-up forms
  */
- (function(global) {
+(function(global) {
     var $signin,
         $signup;
 
@@ -89,9 +89,59 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 
 
 /**
+ * Password inputs UI
+ */
+(function(global) {
+    function init() {
+        $(document).on('click', '.reveal-field-control', function(e) {
+            var $field = $(e.target).closest('.reveal-field');
+            var $input = $field.find('input');
+            $field.toggleClass('off');
+            var isOff = $field.hasClass('off');
+            $input.get(0).type = isOff ? 'text' : 'password';
+        });
+    }
+
+    global.passwordsInputsModule = {
+        init: init
+    }
+})(window);
+
+
+/**
+ * User Menu
+ */
+(function(global) {
+    var $menu, $menuTrigger;
+
+    function init() {
+        $menu = $('.user-block');
+        $menuTrigger = $menu.find('.user-avatar');
+        if (!($menu.length > 0 && $menuTrigger.length > 0)) return;
+
+        $menuTrigger.on('click', function() {
+            $menu.toggleClass('open');
+        });
+
+        $(document).on('click', function(e) {
+            if (!$menu.get(0).contains(e.target)) {
+                $menu.removeClass('open');
+            }
+        });
+    }
+
+    global.menuModule = {
+        init: init
+    };
+})(window);
+
+
+/**
  * init scripts
  */
 $(function() {
     window.headerModule && window.headerModule.init();
     window.formsModule && window.formsModule.init();
+    window.passwordsInputsModule && window.passwordsInputsModule.init();
+    window.menuModule && window.menuModule.init();
 });

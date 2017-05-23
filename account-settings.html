@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="no-js ie ltie8 ltie9 ltie10" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 ltie9 ltie10" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie gtie8 ie9 ltie10" lang="en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="en"><!--><![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online SQL Database Modeller</title>
+
+    <script>
+        /*! modernizr 3.5.0 (Custom Build) | MIT *
+         * https://modernizr.com/download/?-svg-svgasimg-setclasses !*/
+        !function(e,n,t){function o(e,n){return typeof e===n}function s(){var e,n,t,s,i,a,l;for(var u in f)if(f.hasOwnProperty(u)){if(e=[],n=f[u],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(s=o(n.fn,"function")?n.fn():n.fn,i=0;i<e.length;i++)a=e[i],l=a.split("."),1===l.length?Modernizr[l[0]]=s:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=s),r.push((s?"":"no-")+l.join("-"))}}function i(e){var n=c.className,t=Modernizr._config.classPrefix||"";if(d&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(o,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),d?c.className.baseVal=n:c.className=n)}function a(e,n){if("object"==typeof e)for(var t in e)u(e,t)&&a(t,e[t]);else{e=e.toLowerCase();var o=e.split("."),s=Modernizr[o[0]];if(2==o.length&&(s=s[o[1]]),"undefined"!=typeof s)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),i([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var r=[],f=[],l={_version:"3.5.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){f.push({name:e,fn:n,options:t})},addAsyncTest:function(e){f.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr,Modernizr.addTest("svg",!!n.createElementNS&&!!n.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect);var u,c=n.documentElement,d="svg"===c.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;u=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,t){return e.call(n,t)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var t=this._l[e];setTimeout(function(){var e,o;for(e=0;e<t.length;e++)(o=t[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=a}),Modernizr.addTest("svgasimg",n.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")),s(),i(r),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);
+    </script>
+
+    <!-- css styles -->
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,400i,700,700i" >
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- main css styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- BEGIN .page-wrapper -->
+    <!--
+        add specific page class to "page-wrapper"
+        example: landing-page, account-page
+    -->
+    <div class="page-wrapper account-page">
+
+        <!-- BEGIN navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand" title="Online SQL Database Modeller Logo">
+                        <img class="logo" src="img/logo.svg" alt="Online SQL Database Modeller Logo" width="63" height="63" onerror="this.src='img/logo.png'; this.onerror=null;">
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#404">Capabilities</a></li>
+                        <li><a href="#404">Features</a></li>
+                        <li><a href="#404">Blog</a></li>
+                        <li><a href="#404">Support</a></li>
+                    </ul>
+                    <div class="navbar-right">
+                        <!-- links for not-auth user -->
+                        <!--
+                            <a class="btn btn-link" href="#sign-in" data-toggle="modal">Log in</a>
+                            <a class="btn btn-primary" href="#sign-up" data-toggle="modal">Sign up</a>
+                        -->
+
+                        <!-- BEGIN user-block -->
+                        <div class="user-block">
+                            <div class="user-avatar">
+                                <svg class="icon">
+                                    <use xlink:href="img/symbol-defs.svg#icon-user" />
+                                </svg>
+                            </div>
+                            <div class="user-profile">
+                                <!--
+                                    for real image add url as backgorund-image
+                                    <div
+                                        class="user-profile-avatar user-avatar"
+                                        style="background-image: url('https://randomuser.me/api/portraits/women/24.jpg')"
+                                    >
+                                -->
+                                <div class="user-profile-avatar user-avatar">
+                                    <svg class="icon">
+                                        <use xlink:href="img/symbol-defs.svg#icon-user" />
+                                    </svg>
+                                </div>
+                                <div class="user-profile-data">
+                                    <h5 class="user-profile-name">Eugene Belous</h5>
+                                    <div class="user-profile-email">belousevgen@gmail.com</div>
+                                    <a class="btn btn-primary" href="javascript:void(0)">Account</a>
+                                    <div class="user-profile-footer">
+                                        <a class="btn btn-link" href="#">Log out</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END user-block -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END navbar -->
+
+        <div class="page-content">
+            <div class="container">
+                <h3 class="page-content-title mtitle-h3">Account</h3>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <ul class="side-nav">
+                            <li class="active"><a href="account-settings.html">Account Settings</a></li>
+                            <li><a href="account-external-logins.html">External Loginst</a></li>
+                            <li><a href="account-change-password.html">Change Password</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="page-content-inner">
+                            <form class="account-settings-form" method="POST" action="/">
+                                <div class="form-group">
+                                    <label for="account-email">Email</label>
+                                    <input type="email" class="form-control" id="account-email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="account-name">Name</label>
+                                    <input type="text" class="form-control" id="account-name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="account-username">Username</label>
+                                    <input type="text" class="form-control" id="account-username">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="account-companyname">Company Name</label>
+                                    <input type="text" class="form-control" id="account-companyname">
+                                </div>
+                                <button class="btn btn-lg btn-primary" type="submit">Save</button>
+                            </form>
+                            <div class="account-delete-info">
+                                <a href="javascript:void(0)">Delete my profile</a>
+                                <div class="text-muted">
+                                    <small>You will receive an email to confirm your decision.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <form class="account-avatar-form">
+                            <label class="account-avatar">
+                                <svg class="icon account-avatar-placeholder">
+                                    <use xlink:href="img/symbol-defs.svg#icon-user" />
+                                </svg>
+                                <input type="file" name="">
+                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" width="210" height="210">
+                            </label>
+                            <div class="account-avatar-form-btns">
+                                <div>
+                                    <button class="btn btn-default" type="button">Upload</button>
+                                </div>
+                                <div>
+                                    <button class="btn btn-default" type="submit">Remove</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BEGIN page-footer -->
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 col-xs-6">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h4 class="page-footer-title">Info</h4>
+                                <ul class="page-footer-list">
+                                    <li><a href="">Plans & Pricing</a></li>
+                                    <li><a href="">Terms of service</a></li>
+                                    <li><a href="">Privacy Policy</a></li>
+                                    <li><a href="">About</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <h4 class="page-footer-title">Help</h4>
+                                <ul class="page-footer-list">
+                                    <li><a href="">Tutorials </a></li>
+                                    <li><a href="">FAQ</a></li>
+                                    <li><a href="">Blog</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 col-xs-6 text-right">
+                        <h4 class="page-footer-title">Follow Us</h4>
+                        <ul class="social-list clearfix">
+                            <li>
+                                <a href="#" title="youtube">
+                                    <svg class="icon">
+                                        <use xlink:href="img/symbol-defs.svg#icon-youtube" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="twitter">
+                                    <svg class="icon">
+                                        <use xlink:href="img/symbol-defs.svg#icon-twitter" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <small class="copy">Copyright @2017 All right reserved</small>
+                    </div>
+               </div>
+            </div>
+        </footer>
+        <!-- END page-footer -->
+    </div>
+    <!-- END .page-wrapper -->
+
+    <!-- BEGIN sign in -->
+    <div class="auth-block modal" id="sign-in" tabindex="-1" role="dialog">
+        <div class="container auth-block-inner">
+            <div class="auth-header clearfix">
+                <a class="pull-left" href="#">
+                    <img class="logo" src="img/logo.svg" alt="Online SQL Database Modeller Logo" width="63" height="63" onerror="this.src='img/logo.png'; this.onerror=null;">
+                </a>
+                <button class="pull-right auth-close" type="button" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="auth-body">
+               <div class="auth-body-wrap">
+                    <form method="POST" action="/">
+                       <h3 class="auth-title">Sign in</h3>
+                       <input type="email" class="form-control" placeholder="Email">
+                       <input type="password" class="form-control" placeholder="Password">
+
+                       <div class="text-right">
+                           <a href="#"><small>Forgot Password?</small></a>
+                       </div>
+
+                       <div class="submit-block">
+                           <button class="btn btn-primary btn-lg btn-block" type="submit">Sign in</button>
+                       </div>
+
+                   </form>
+                   <div class="auth-social">
+                       <div class="auth-social-label">or sign in with</div>
+                       <div class="auth-social-links">
+                           <div class="auth-social-cell">
+                               <a class="btn gl" href="#">Google</a>
+                           </div>
+                           <div class="auth-social-cell">
+                               <a class="btn fb" href="#">Facebook</a>
+                           </div>
+                           <div class="auth-social-cell">
+                               <a class="btn ms" href="#">Microsoft</a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+            </div>
+            <div class="auth-foot">
+                <div class="auth-foot-inner">
+                    Don't have an account? <a href="#sign-up" data-toggle="modal">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END sign in -->
+
+    <!-- BEGIN sign up -->
+    <div class="auth-block modal" id="sign-up" tabindex="-1" role="dialog">
+        <div class="container auth-block-inner">
+            <div class="auth-header clearfix">
+                <a class="pull-left" href="#">
+                    <img class="logo" src="img/logo.svg" alt="Online SQL Database Modeller Logo" width="63" height="63" onerror="this.src='img/logo.png'; this.onerror=null;">
+                </a>
+                <button class="pull-right auth-close" type="button" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="auth-body">
+                <div class="auth-body-wrap">
+                    <form method="POST" action="/">
+                        <h3 class="auth-title">Register</h3>
+                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="password" class="form-control" placeholder="Password">
+
+                        <div class="field-control">
+                            <label class="field-control-label" for="org-size">How many people are in your organization?</label>
+                            <select class="form-control">
+                                <option selected disabled>Oraganization size</option>
+                                <option>5</option>
+                                <option>10</option>
+                                <option>15</option>
+                                <option>20</option>
+                            </select>
+                        </div>
+
+                        <div class="agree-block">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox" name="" id="agree">
+                                <span class="checkbox-icon"></span>
+                            </label>
+                            <label class="agree-block-text" for="agree">Please agree to the</label>
+                            <a href="javascript:void(0)">Terms of Service</a>
+                        </div>
+
+                        <div class="submit-block">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+                        </div>
+                    </form>
+                    <div class="auth-social">
+                        <div class="auth-social-label">or sign in with</div>
+                        <div class="auth-social-links">
+                            <div class="auth-social-cell">
+                                <a class="btn gl" href="#">Google</a>
+                            </div>
+                            <div class="auth-social-cell">
+                                <a class="btn fb" href="#">Facebook</a>
+                            </div>
+                            <div class="auth-social-cell">
+                                <a class="btn ms" href="#">Microsoft</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="auth-foot">
+                <div class="auth-foot-inner">
+                    Already have an account? <a href="#sign-in" data-toggle="modal">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END sign up -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- for svg sprite -->
+    <script src="js/svgxuse.min.js"></script>
+
+    <!-- custom scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
