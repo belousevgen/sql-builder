@@ -209,6 +209,17 @@ body {
             display: block;
         }
 
+/**
+ * Animation for Bootstrap Tabs
+ */
+.tab-pane.active {
+    animation: showTab 1s both;
+}
+
+    @keyframes showTab {
+        from { opacity: 0; }
+    }
+
 
 /**
  * Main Centering Container
