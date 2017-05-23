@@ -17,22 +17,17 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
  */
 (function(global) {
     var $navbar,
-        $section,
-        headHeight,
-        treshold,
-        offset = 200; // magic number
+        treshold;
 
     function init() {
         $navbar = $('.navbar');
-        $section = $('.head-section');
-        if (!($navbar.length > 0 && $section.length > 0)) return;
+        if (!($navbar.length > 0)) return;
         calcSize();
         bindEvents();
     }
 
     function calcSize() {
-        headHeight = $section.outerHeight();
-        treshold = headHeight - offset;
+        treshold = $navbar.outerHeight();
     }
 
     function onScroll() {
