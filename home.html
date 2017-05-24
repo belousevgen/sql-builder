@@ -72,6 +72,7 @@
 
         <!-- BEGIN head-section -->
         <section class="head-section">
+            <div class="head-image"></div>
             <div class="container">
                 <div class="jumbotron_ text-center">
                     <h1 class="title-h1">Online SQL Database Modeller</h1>
@@ -93,7 +94,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <div class="desc-item">
+                        <div data-scroll class="desc-item">
                             <h2 class="title-h2">Design your database online</h2>
                             <ul>
                                 <li>ER Diagrams</li>
@@ -104,7 +105,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-md-offset-1">
-                        <img class="img-responsive"
+                        <img data-scroll class="desc-image img-responsive"
                             src="img/desc-item.png"
                             srcset="img/desc-item@2x.png 2x"
                             width="679" height="541"
@@ -115,8 +116,7 @@
 
                 <div class="row">
                     <div class="col-md-5 col-md-push-6 col-md-offset-1">
-
-                        <div class="desc-item">
+                        <div data-scroll class="desc-item">
                             <h2 class="title-h2">Forward Engineering</h2>
                             <ul>
                                 <li>MS SQL Server</li>
@@ -126,7 +126,7 @@
                        </div>
                     </div>
                     <div class="col-md-6 col-md-pull-6">
-                        <img class="img-responsive"
+                        <img data-scroll class="desc-image img-responsive"
                             src="img/desc-item.png"
                             srcset="img/desc-item@2x.png 2x"
                             width="679" height="541"
@@ -137,7 +137,7 @@
 
                 <div class="row">
                     <div class="col-md-5">
-                        <div class="desc-item">
+                        <div data-scroll class="desc-item">
                             <h2 class="title-h2">Reverse Engineering</h2>
                             <ul>
                                 <li>MS SQL Server</li>
@@ -148,7 +148,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-md-offset-1">
-                        <img class="img-responsive"
+                        <img data-scroll class="desc-image img-responsive"
                             src="img/desc-item.png"
                             srcset="img/desc-item@2x.png 2x"
                             width="679" height="541"
@@ -421,7 +421,11 @@
     <!-- for svg sprite -->
     <script src="js/svgxuse.min.js"></script>
 
+    <!-- scroll reveal effetcs on landing page -->
+    <script src="js/ScrollTrigger.min.js"></script>
+
     <!-- custom scripts -->
     <script src="js/main.js"></script>
+
 </body>
 </html>

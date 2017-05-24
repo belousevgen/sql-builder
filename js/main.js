@@ -55,6 +55,94 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 
 
 /**
+ * Parallax Image
+ */
+(function(global) {
+    var $window,
+        image,
+        headSection,
+        height,
+        raf = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame,
+        scrollTop,
+        ticking,
+        factor = 0.4// factor < 1
+
+    function init() {
+        headSection = document.querySelector('.head-section');
+        image = document.querySelector('.head-image');
+        if (!headSection && !image) return;
+        $window = $(window);
+        calcSize();
+        bindEvents();
+    }
+
+    function calcSize() {
+        height = headSection.offsetHeight;
+    }
+
+    function requestTick() {
+        if(!ticking) {
+            raf(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        image.style.transform = 'translate3d(0, ' + scrollTop * factor + 'px, 0)';
+        image.style.opacity = 1 - scrollTop / height;
+        ticking = false;
+    }
+
+    function onScroll() {
+        scrollTop = $window.scrollTop();
+        if (scrollTop > height) return;
+        requestTick();
+    }
+
+    function bindEvents() {
+        $window.on('scroll', onScroll);
+        $window.on('resize', calcSize);
+    }
+
+    global.parallaxImageModule = {
+        init: init,
+        calcSize: calcSize
+    }
+})(window);
+
+
+/**
+ * Reaveal Scroll Effects on Home page
+ * using ScrollTrigger library
+ */
+(function(global) {
+    var trigger;
+
+    function init() {
+        if (typeof window.ScrollTrigger !== 'function') return;
+        trigger = new ScrollTrigger({
+            toggle: {
+                visible: 'scroll-show',
+                hidden: 'scroll-hide'
+            },
+            offset: {
+                x: 0,
+                y: 100
+            },
+            once: true
+        });
+    }
+
+    global.scrollRevealModule = {
+        init: init
+    };
+})(window);
+
+
+/**
  * Sign-in & Sign-up forms
  */
 (function(global) {
@@ -136,6 +224,8 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
  */
 $(function() {
     window.headerModule && window.headerModule.init();
+    window.parallaxImageModule && window.parallaxImageModule.init();
+    window.scrollRevealModule && window.scrollRevealModule.init();
     window.formsModule && window.formsModule.init();
     window.passwordsInputsModule && window.passwordsInputsModule.init();
     window.menuModule && window.menuModule.init();
