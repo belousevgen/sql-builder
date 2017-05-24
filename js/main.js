@@ -35,7 +35,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
     function onScroll() {
         var scrollTop = $(window).scrollTop();
         var action = scrollTop > treshold ? 'add' : 'remove';
-        $navbar[action + 'Class']('navbar-fixed-top navbar-inverse');
+        $navbar[action + 'Class']('navbar-inverse');
     }
 
     function bindEvents() {

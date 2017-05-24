@@ -270,22 +270,17 @@ body {
  * Navbar
  */
 .navbar {
-    position: absolute;
-    z-index: 1030;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     border: 0;
     color: #fff;
+    transition: 0.3s;
 }
 
     .navbar-fixed-top {
         position: fixed;
-        animation: showHeader 0.5s ease-in-out both;
-    }
-
-    @keyframes showHeader {
-        from { transform: translateY(-100%); }
     }
 
     .navbar-inverse {

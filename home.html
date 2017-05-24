@@ -36,12 +36,11 @@
 
     <!-- BEGIN page-wrapper -->
     <!--
-        add specific page class to "page-wrapper"
-        example: landing-page, account-page
+        на странице лендинга нужно добавить класс landing-page на page-wrapper,
     -->
     <div class="page-wrapper landing-page">
         <!-- BEGIN navbar -->
-        <div class="navbar">
+        <div class="navbar navbar-fixed-top">
             <div class="navbar-inner container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -70,179 +69,184 @@
         </div>
         <!-- END navbar -->
 
-        <!-- BEGIN head-section -->
-        <section class="head-section">
-            <div class="head-image"></div>
-            <div class="container">
-                <div class="jumbotron_ text-center">
-                    <h1 class="title-h1">Online SQL Database Modeller</h1>
-                    <p class="product-desc">
-                        The best tool for online database modeling for
-                        <br>
-                        SQL developers, DBA, DW developers
-                    </p>
-                    <p class="cta-block">
-                        <a class="btn btn-lg btn-primary" href="javascript:void(0)" role="button">Try Designing online FREE!</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!-- END head-section -->
-
-        <!-- BEGIN Description Section -->
-        <section class="desc-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5">
-                        <div data-scroll class="desc-item">
-                            <h2 class="title-h2">Design your database online</h2>
-                            <ul>
-                                <li>ER Diagrams</li>
-                                <li>Subject Areas</li>
-                                <li>Database Options</li>
-                            </ul>
-                            <p>SEO: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-md-offset-1">
-                        <img data-scroll class="desc-image img-responsive"
-                            src="img/desc-item.png"
-                            srcset="img/desc-item@2x.png 2x"
-                            width="679" height="541"
-                            alt=""
-                        >
+        <!-- BEGIN page-main -->
+        <main class="page-main">
+            <!-- @RenderBody() -->
+            <!-- BEGIN head-section -->
+            <section class="head-section">
+                <div class="head-image"></div>
+                <div class="container">
+                    <div class="text-center">
+                        <h1 class="title-h1">Online SQL Database Modeller</h1>
+                        <p class="product-desc">
+                            The best tool for online database modeling for
+                            <br>
+                            SQL developers, DBA, DW developers
+                        </p>
+                        <p class="cta-block">
+                            <a class="btn btn-lg btn-primary" href="javascript:void(0)" role="button">Try Designing online FREE!</a>
+                        </p>
                     </div>
                 </div>
+            </section>
+            <!-- END head-section -->
 
-                <div class="row">
-                    <div class="col-md-5 col-md-push-6 col-md-offset-1">
-                        <div data-scroll class="desc-item">
-                            <h2 class="title-h2">Forward Engineering</h2>
-                            <ul>
-                                <li>MS SQL Server</li>
-                                <li>Generate Options</li>
-                            </ul>
-                            <p>SEO: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</p>
-                       </div>
-                    </div>
-                    <div class="col-md-6 col-md-pull-6">
-                        <img data-scroll class="desc-image img-responsive"
-                            src="img/desc-item.png"
-                            srcset="img/desc-item@2x.png 2x"
-                            width="679" height="541"
-                            alt=""
-                        >
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-5">
-                        <div data-scroll class="desc-item">
-                            <h2 class="title-h2">Reverse Engineering</h2>
-                            <ul>
-                                <li>MS SQL Server</li>
-                                <li>Transparent</li>
-                                <li>Credential Free</li>
-                            </ul>
-                            <p>SEO: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-md-offset-1">
-                        <img data-scroll class="desc-image img-responsive"
-                            src="img/desc-item.png"
-                            srcset="img/desc-item@2x.png 2x"
-                            width="679" height="541"
-                            alt=""
-                        >
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END Description Section -->
-
-        <!-- BEGIN features-section -->
-        <section class="features-section">
-            <div class="container">
-                <h2 class="title-h1 text-center">Features</h2>
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs features-tabs" role="tablist">
-                    <li role="presentation" class="active">
-                        <a href="#revisions" aria-controls="revisions" role="tab" data-toggle="tab">
-                            <svg class="icon icon-revisions">
-                                <use xlink:href="img/symbol-defs.svg#icon-revisions" />
-                            </svg>
-                            Revisions
-                        </a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#ak-indexes" aria-controls="revisions" role="tab" data-toggle="tab">
-                            <svg class="icon icon-ak-indexes">
-                                <use xlink:href="img/symbol-defs.svg#icon-ak-indexes" />
-                            </svg>
-                            AK Indexes
-                        </a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#view-mode" aria-controls="view-mode" role="tab" data-toggle="tab">
-                            <svg class="icon icon-view-mode">
-                                <use xlink:href="img/symbol-defs.svg#icon-view-mode" />
-                            </svg>
-                            View Mode
-                        </a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#export" aria-controls="export" role="tab" data-toggle="tab">
-                            <svg class="icon icon-export">
-                                <use xlink:href="img/symbol-defs.svg#icon-export" />
-                            </svg>
-                            Export
-                        </a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#more" aria-controls="more" role="tab" data-toggle="tab">
-                            <svg class="icon icon-even-more">
-                                <use xlink:href="img/symbol-defs.svg#icon-even-more" />
-                            </svg>
-                            Even more
-                        </a>
-                    </li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="revisions">SEO 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</div>
-                    <div role="tabpanel" class="tab-pane" id="ak-indexes">SEO 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie.</div>
-                    <div role="tabpanel" class="tab-pane" id="view-mode">SEO 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</div>
-                    <div role="tabpanel" class="tab-pane" id="export">SEO 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</div>
-                    <div role="tabpanel" class="tab-pane" id="more">SEO 5: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam.</div>
-                </div>
-
-                <div class="coming-features">
-                    <h3 class="title-h2 text-center">Coming Soon...</h3>
-                    <ul>
-                        <li>
-                            <div class="img-wrap">
-                                <img src="img/vendor-logos/slack-jira.png" width="139" height="28" srcset="img/vendor-logos/slack-jira@2x.png 2x">
+            <!-- BEGIN Description Section -->
+            <section class="desc-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div data-scroll class="desc-item">
+                                <h2 class="title-h2">Design your database online</h2>
+                                <ul>
+                                    <li>ER Diagrams</li>
+                                    <li>Subject Areas</li>
+                                    <li>Database Options</li>
+                                </ul>
+                                <p>SEO: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</p>
                             </div>
-                            Colaborate
-                        </li>
-                        <li>
-                           <div class="img-wrap">
-                                <img src="img/vendor-logos/oracle.png" width="115" height="16" srcset="img/vendor-logos/oracle@2x.png 2x">
+                        </div>
+                        <div class="col-md-6 col-md-offset-1">
+                            <img data-scroll class="desc-image img-responsive"
+                                src="img/desc-item.png"
+                                srcset="img/desc-item@2x.png 2x"
+                                width="679" height="541"
+                                alt=""
+                            >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 col-md-push-6 col-md-offset-1">
+                            <div data-scroll class="desc-item">
+                                <h2 class="title-h2">Forward Engineering</h2>
+                                <ul>
+                                    <li>MS SQL Server</li>
+                                    <li>Generate Options</li>
+                                </ul>
+                                <p>SEO: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</p>
                            </div>
-                            Oracle 12
-                        </li>
-                        <li>
-                            <div class="img-wrap">
-                                <img src="img/vendor-logos/sql-server.png" width="140" height="45" srcset="img/vendor-logos/sql-server@2x.png 2x">
+                        </div>
+                        <div class="col-md-6 col-md-pull-6">
+                            <img data-scroll class="desc-image img-responsive"
+                                src="img/desc-item.png"
+                                srcset="img/desc-item@2x.png 2x"
+                                width="679" height="541"
+                                alt=""
+                            >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div data-scroll class="desc-item">
+                                <h2 class="title-h2">Reverse Engineering</h2>
+                                <ul>
+                                    <li>MS SQL Server</li>
+                                    <li>Transparent</li>
+                                    <li>Credential Free</li>
+                                </ul>
+                                <p>SEO: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</p>
                             </div>
-                            MS SQL 2016
+                        </div>
+                        <div class="col-md-6 col-md-offset-1">
+                            <img data-scroll class="desc-image img-responsive"
+                                src="img/desc-item.png"
+                                srcset="img/desc-item@2x.png 2x"
+                                width="679" height="541"
+                                alt=""
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END Description Section -->
+
+            <!-- BEGIN features-section -->
+            <section class="features-section">
+                <div class="container">
+                    <h2 class="title-h1 text-center">Features</h2>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs features-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#revisions" aria-controls="revisions" role="tab" data-toggle="tab">
+                                <svg class="icon icon-revisions">
+                                    <use xlink:href="img/symbol-defs.svg#icon-revisions" />
+                                </svg>
+                                Revisions
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#ak-indexes" aria-controls="revisions" role="tab" data-toggle="tab">
+                                <svg class="icon icon-ak-indexes">
+                                    <use xlink:href="img/symbol-defs.svg#icon-ak-indexes" />
+                                </svg>
+                                AK Indexes
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#view-mode" aria-controls="view-mode" role="tab" data-toggle="tab">
+                                <svg class="icon icon-view-mode">
+                                    <use xlink:href="img/symbol-defs.svg#icon-view-mode" />
+                                </svg>
+                                View Mode
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#export" aria-controls="export" role="tab" data-toggle="tab">
+                                <svg class="icon icon-export">
+                                    <use xlink:href="img/symbol-defs.svg#icon-export" />
+                                </svg>
+                                Export
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#more" aria-controls="more" role="tab" data-toggle="tab">
+                                <svg class="icon icon-even-more">
+                                    <use xlink:href="img/symbol-defs.svg#icon-even-more" />
+                                </svg>
+                                Even more
+                            </a>
                         </li>
                     </ul>
-                    <a class="btn btn-lg btn-primary" href="javascript: void(0)">Try Designing online FREE!</a>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="revisions">SEO 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</div>
+                        <div role="tabpanel" class="tab-pane" id="ak-indexes">SEO 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie.</div>
+                        <div role="tabpanel" class="tab-pane" id="view-mode">SEO 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</div>
+                        <div role="tabpanel" class="tab-pane" id="export">SEO 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</div>
+                        <div role="tabpanel" class="tab-pane" id="more">SEO 5: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam.</div>
+                    </div>
+
+                    <div class="coming-features">
+                        <h3 class="title-h2 text-center">Coming Soon...</h3>
+                        <ul>
+                            <li>
+                                <div class="img-wrap">
+                                    <img src="img/vendor-logos/slack-jira.png" width="139" height="28" srcset="img/vendor-logos/slack-jira@2x.png 2x">
+                                </div>
+                                Colaborate
+                            </li>
+                            <li>
+                               <div class="img-wrap">
+                                    <img src="img/vendor-logos/oracle.png" width="115" height="16" srcset="img/vendor-logos/oracle@2x.png 2x">
+                               </div>
+                                Oracle 12
+                            </li>
+                            <li>
+                                <div class="img-wrap">
+                                    <img src="img/vendor-logos/sql-server.png" width="140" height="45" srcset="img/vendor-logos/sql-server@2x.png 2x">
+                                </div>
+                                MS SQL 2016
+                            </li>
+                        </ul>
+                        <a class="btn btn-lg btn-primary" href="javascript: void(0)">Try Designing online FREE!</a>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!-- END features-section -->
+            </section>
+            <!-- END features-section -->
+        </main>
+        <!-- END page-main -->
 
         <!-- BEGIN page-footer -->
         <footer class="page-footer">
