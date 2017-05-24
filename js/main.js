@@ -145,6 +145,33 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 
 
 /**
+ * Scrollable tabs
+ */
+(function(global) {
+    var tabs,
+        $tabs;
+
+    function init() {
+        tabs = document.querySelector('.features-tabs');
+        if (!tabs) return;
+        $tabs = $(tabs);
+        $(window).on('resize', onResize);
+        onResize();
+    }
+
+    function onResize() {
+        var isOverflow  = tabs.scrollWidth > tabs.offsetWidth;
+        var action = isOverflow ? 'add' : 'remove';
+        $tabs[action + 'Class']('scrollable');
+    }
+
+    global.tabsModule = {
+        init: init
+    }
+})(window);
+
+
+/**
  * Sign-in & Sign-up forms
  */
 (function(global) {
@@ -228,6 +255,7 @@ $(function() {
     window.headerModule && window.headerModule.init();
     window.parallaxImageModule && window.parallaxImageModule.init();
     window.scrollRevealModule && window.scrollRevealModule.init();
+    window.tabsModule && window.tabsModule.init();
     window.formsModule && window.formsModule.init();
     window.passwordsInputsModule && window.passwordsInputsModule.init();
     window.menuModule && window.menuModule.init();

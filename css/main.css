@@ -608,20 +608,23 @@ body {
 
 .features-tabs {
     margin-bottom: 35px;
-    text-align: justify;
-    text-justify: newspaper;
-    font-size: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+    justify-content: space-between;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
     border-bottom-color: #e2e2e2;
 }
 
+    .features-tabs:before,
     .features-tabs:after {
-        content: "";
-        display: inline-block;
-        vertical-align: top;
-        overflow: hidden;
-        visibility: hidden;
-        width: 100%;
-        height: 0;
+        content: none;
+        display: none;
     }
 
     .features-tabs > li {
@@ -671,6 +674,31 @@ body {
                 .features-tabs > li.active > a:before {
                     border-top-color: #3ea8de;
                 }
+
+        .features-tabs.scrollable {
+            overflow-x: auto;
+            background:
+                radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center,
+                radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
+            background-size: 10px 100%, 10px 100%;
+            background-attachment: scroll, scroll;
+            background-repeat: no-repeat;
+        }
+
+            .features-tabs.scrollable > li:first-child {
+                background-image:
+                    linear-gradient(to right, rgba(242,242,242, 1) 50%, rgba(242,242,242, 0) 100%);
+                background-repeat: no-repeat;
+                background-size: 20px 100%;
+            }
+
+            .features-tabs.scrollable > li:last-child {
+                background-image:
+                    linear-gradient(to left, rgba(242,242,242, 1) 50%, rgba(242,242,242, 0) 100%);
+                background-repeat: no-repeat;
+                background-position: 100% 0;
+                background-size: 20px 100%;
+            }
 
         .icon {
           display: inline-block;
