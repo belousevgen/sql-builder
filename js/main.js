@@ -17,11 +17,13 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
  */
 (function(global) {
     var $navbar,
+        $landingPage,
         treshold;
 
     function init() {
+        $landingPage = $('.landing-page');
         $navbar = $('.navbar');
-        if (!($navbar.length > 0)) return;
+        if (!($navbar.length > 0 && $landingPage.length > 0)) return;
         calcSize();
         bindEvents();
     }
