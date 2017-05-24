@@ -679,6 +679,7 @@ body {
           stroke-width: 0;
           stroke: currentColor;
           fill: currentColor;
+          transform: translateZ(0);
         }
 
             .icon-revisions {
