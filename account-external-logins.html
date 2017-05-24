@@ -36,8 +36,7 @@
 
     <!-- BEGIN .page-wrapper -->
     <!--
-        add specific page class to "page-wrapper"
-        example: landing-page, account-page
+        на странице личного кабинета нужно добавить класс account-page на page-wrapper
     -->
     <div class="page-wrapper account-page">
 
@@ -107,66 +106,71 @@
         </div>
         <!-- END navbar -->
 
-        <div class="page-content">
-            <div class="container">
-                <h3 class="page-content-title mtitle-h3">Account</h3>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <ul class="side-nav">
-                            <li><a href="account-settings.html">Account Settings</a></li>
-                            <li class="active"><a href="account-external-logins.html">External Loginst</a></li>
-                            <li><a href="account-change-password.html">Change Password</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="page-content-inner">
-                            <form class="account-settings-form" method="POST" action="/">
-                                <div class="account-groups">
-                                    <div class="account-group">
-                                        <div class="account-login">
-                                            <div class="account-login-text">Google</div>
-                                            <div class="account-login-controls">
-                                                <button class="btn btn-default" type="button">Remove</button>
-                                            </div>
-                                        </div>
-
-                                        <div class="account-login">
-                                            <div class="account-login-text">Facebook</div>
-                                            <div class="account-login-controls">
-                                                <button class="btn btn-default" type="button">Remove</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="account-group">
-                                        <label class="account-group-label">Add more logins:</label>
-                                        <div class="account-login">
-                                            <div class="account-login-text">Microsoft</div>
-                                            <div class="account-login-controls">
-                                                <button class="btn btn-default" type="button">Add</button>
-                                            </div>
-                                        </div>
-
-                                        <div class="account-login">
-                                            <div class="account-login-text">Twitter</div>
-                                            <div class="account-login-controls">
-                                                <button class="btn btn-default" type="button">Add</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-lg btn-primary" type="submit">Save</button>
-                            </form>
+        <!-- BEGIN page-main -->
+        <div class="page-main">
+            <!-- @RenderBody() -->
+            <div class="page-content">
+                <div class="container">
+                    <h3 class="page-content-title mtitle-h3">Account</h3>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <ul class="side-nav">
+                                <li><a href="account-settings.html">Account Settings</a></li>
+                                <li class="active"><a href="account-external-logins.html">External Loginst</a></li>
+                                <li><a href="account-change-password.html">Change Password</a></li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <div class="col-sm-3">
+                        <div class="col-sm-6">
+                            <div class="page-content-inner">
+                                <form class="account-settings-form" method="POST" action="/">
+                                    <div class="account-groups">
+                                        <div class="account-group">
+                                            <div class="account-login">
+                                                <div class="account-login-text">Google</div>
+                                                <div class="account-login-controls">
+                                                    <button class="btn btn-default" type="button">Remove</button>
+                                                </div>
+                                            </div>
 
+                                            <div class="account-login">
+                                                <div class="account-login-text">Facebook</div>
+                                                <div class="account-login-controls">
+                                                    <button class="btn btn-default" type="button">Remove</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="account-group">
+                                            <label class="account-group-label">Add more logins:</label>
+                                            <div class="account-login">
+                                                <div class="account-login-text">Microsoft</div>
+                                                <div class="account-login-controls">
+                                                    <button class="btn btn-default" type="button">Add</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="account-login">
+                                                <div class="account-login-text">Twitter</div>
+                                                <div class="account-login-controls">
+                                                    <button class="btn btn-default" type="button">Add</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-lg btn-primary" type="submit">Save</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+         <!-- END page-main -->
 
         <!-- BEGIN page-footer -->
         <footer class="page-footer">
