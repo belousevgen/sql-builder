@@ -111,67 +111,69 @@
             <!-- @RenderBody() -->
             <div class="page-content">
                 <div class="container">
-                    <h3 class="page-content-title title-h3">Account</h3>
+                    <div class="page-content-title clearfix">
+                        <h3 class="title-h3 pull-left" style="margin: 0">Dashboard</h3>
+                        <button class="btn btn-primary pull-right" style="padding: 13px 18px 12px;">Create new project</button>
+                    </div>
+
                     <div class="row">
                         <div class="col-sm-3">
                             <ul class="side-nav">
-                                <li class="active"><a href="account-settings.html">Account Settings</a></li>
-                                <li><a href="account-external-logins.html">External Loginst</a></li>
-                                <li><a href="account-change-password.html">Change Password</a></li>
+                                <li class="active"><a href="javascript:void(0)">All Projects</a></li>
+                                <li><a href="javascript:void(0)">Created by Me</a></li>
+                                <li><a href="javascript:void(0)">Shared with Me</a></li>
+                                <li><a href="javascript:void(0)">Archived</a></li>
                             </ul>
                         </div>
 
-                        <div class="col-sm-6">
-                            <div class="page-content-inner">
-                                <form class="account-settings-form" method="POST" action="/">
-                                    <div class="form-group">
-                                        <label for="account-email">Email</label>
-                                        <input type="email" class="form-control" id="account-email">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="account-name">Name</label>
-                                        <input type="text" class="form-control" id="account-name">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="account-username">Username</label>
-                                        <input type="text" class="form-control" id="account-username">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="account-companyname">Company Name</label>
-                                        <input type="text" class="form-control" id="account-companyname">
-                                    </div>
-                                    <button class="btn btn-lg btn-primary" type="submit">Save</button>
-                                </form>
-                                <div class="account-delete-info">
-                                    <a href="javascript:void(0)">Delete my profile</a>
-                                    <div class="text-muted">
-                                        <small>You will receive an email to confirm your decision.</small>
+                        <div class="col-sm-9">
+                            <!-- BEGIN project-list -->
+                            <div class="project-list">
+                                <!-- BEGIN project-list-item -->
+                                <div class="project-list-item">
+                                    <div class="project-item">
+                                        <div class="project-item-icon">
+                                            <svg class="icon">
+                                                <use xlink:href="img/symbol-defs.svg#project" />
+                                            </svg>
+                                        </div>
+                                        <div class="project-item-desc">
+                                            <div class="project-item-title">
+                                                <a href="javascript:void(0)">WaplaDb, v2</a>
+                                            </div>
+                                            <div class="cleafrix">
+                                                <div class="pull-left text-muted">QC Release</div>
+                                                <small class="pull-right">April 20, 2017 17:58</small>
+                                            </div>
+                                        </div>
+                                        <div class="project-item-tools"></div>
                                     </div>
                                 </div>
+                                <!-- END project-list-item -->
+
+                                <!-- BEGIN project-list-item -->
+                                <div class="project-list-item">
+                                    <div class="project-item">
+                                        <div class="project-item-icon">
+                                            <svg class="icon">
+                                                <use xlink:href="img/symbol-defs.svg#project" />
+                                            </svg>
+                                        </div>
+                                        <div class="project-item-desc">
+                                            <div class="project-item-title">
+                                                <a href="javascript:void(0)">WaplaDb, v2</a>
+                                            </div>
+                                            <div class="cleafrix">
+                                                <div class="pull-left text-muted">QC Release</div>
+                                                <small class="pull-right">April 20, 2017 17:58</small>
+                                            </div>
+                                        </div>
+                                        <div class="project-item-tools"></div>
+                                    </div>
+                                </div>
+                                <!-- END project-list-item -->
                             </div>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <form class="account-avatar-form">
-                                <label class="account-avatar">
-                                    <svg class="icon account-avatar-placeholder">
-                                        <use xlink:href="img/symbol-defs.svg#icon-user" />
-                                    </svg>
-                                    <input type="file" name="">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" width="210" height="210">
-                                </label>
-                                <div class="account-avatar-form-btns">
-                                    <div class="account-avatar-form-control">
-                                        <button class="btn btn-default" type="button">Upload</button>
-                                    </div>
-                                    <div class="account-avatar-form-control">
-                                        <button class="btn btn-default" type="submit">Remove</button>
-                                    </div>
-                                </div>
-                            </form>
+                            <!-- END project-list -->
                         </div>
                     </div>
                 </div>

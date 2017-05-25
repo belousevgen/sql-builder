@@ -60,7 +60,7 @@ body {
 }
 
 .text-muted {
-    color: #878787a;
+    color: #878787;
 }
 
 /**
@@ -80,9 +80,18 @@ body {
 }
 
 .btn-default {
+    border: 0;
     color: #666;
     background-color: #efefef;
 }
+
+    .btn-default:hover {
+        background-color: #e0e0e0;
+    }
+
+    .btn-default:active {
+        background-color: #ccc;
+    }
 
 .btn-link,
 .btn-link:hover {
@@ -1329,30 +1338,28 @@ body {
 
 .account-avatar-form {
     margin-top: 26px;
-    overflow: hidden;
 }
 
     .account-avatar-form-btns {
-        display: table;
-        width: 100%;
-        border-collapse: collapse;
-        table-layout: fixed;
+        margin: 0 -10px;
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
-        .account-avatar-form-btns > * {
-            display: table-cell;
+        .account-avatar-form-control {
+            display: inline-block;
+            vertical-align: top;
+            margin: 5px;
+            flex: 1 0 auto;
         }
 
-            .account-avatar-form-btns > *:last-child {
-                padding-left: 10px;
-            }
-
-        .account-avatar-form-btns .btn {
+        .account-avatar-form-control .btn {
             width: 100%;
         }
 
 .account-avatar {
-    margin-bottom: 10px;
+    margin: 0;
     position: relative;
     display: block;
     background-color: #efefef;
@@ -1442,4 +1449,47 @@ body {
 
     .account-login-controls .btn {
         min-width: 0;
+    }
+
+
+/*  Dashbords pages
+   ========================================================================== */
+.project-item {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    padding: 18px 0;
+    border: 1px solid #efefef;
+    border-width: 1px 0;
+}
+
+    .project-item > * {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .project-item-icon {
+        width: 1px;
+        padding-right: 22px;
+    }
+
+        .project-item-icon .icon {
+            width: 24px;
+            height: 25px;
+            color: #ccc;
+        }
+
+    .project-item-desc {}
+
+        .project-item-title {
+            margin-bottom: 5px;
+        }
+
+    .project-item-tools {}
+
+.project-list {}
+
+    .project-list-item + .project-list-item{
+        margin-top: -1px;
     }
