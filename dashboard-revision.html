@@ -114,109 +114,94 @@
 
             <div class="page-content">
                 <div class="container">
-                    <!-- BEGIN dashboard -->
-                    <div class="dashboard">
-                        <!-- BEGIN dashboard-head -->
-                        <div class="dashboard-head clearfix">
-                            <h3 class="dashboard-title title-h3 pull-left">Dashboard</h3>
-                            <div class="pull-right">
-                                <button class="create-btn btn btn-primary">Create new project</button>
-                            </div>
-                        </div>
-                        <!-- END dashboard-head -->
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <!-- BEGIN breadcrumbs -->
+                            <ul class="breadcrumbs">
+                                <li>
+                                    <a href="dashboard.html">Dashboards</a>
+                                </li>
+                            </ul>
+                            <!-- END breadcrumbs -->
+                            <!-- BEGIN dashboard -->
+                            <div class="dashboard">
+                                <!-- BEGIN dashboard-head -->
+                                <div class="dashboard-head clearfix">
 
-                        <!-- BEGIN dashboard-body -->
-                        <div class="dashboard-body">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <ul class="side-nav dashboard-nav">
-                                        <li class="active"><a href="javascript:void(0)">All Projects</a></li>
-                                        <li><a href="javascript:void(0)">Created by Me</a></li>
-                                        <li><a href="javascript:void(0)">Shared with Me</a></li>
-                                        <li><a href="javascript:void(0)">Archived</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-sm-9">
-                                    <!-- BEGIN project-list -->
-                                    <div class="project-list">
-                                        <!-- BEGIN project-list-item -->
-                                        <div class="project-list-item">
-                                            <div class="project-item">
-                                                <div class="project-item-icon">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/symbol-defs.svg#project" />
-                                                    </svg>
-                                                </div>
-                                                <div class="project-item-desc">
-                                                    <div class="project-item-title">
-                                                        <a href="dashboard-project.html">WaplaDb, v2</a>
-                                                    </div>
-                                                    <div class="clearfix">
-                                                        <div class="pull-left project-item-version">QC Release</div>
-                                                        <small class="pull-right project-item-date">April 20, 2017 17:58</small>
-                                                    </div>
-                                                </div>
-                                                <div class="project-item-tools">
-                                                    <div class="project-menu">
-                                                        <button class="project-menu-trigger">
-                                                            <svg class="icon">
-                                                                <use xlink:href="img/symbol-defs.svg#dots" />
-                                                            </svg>
-                                                        </button>
-                                                        <ul class="project-menu-list">
-                                                            <li><a href="javascript:void(0)">Rename</a></li>
-                                                            <li><a href="javascript:void(0)">Manage Revisions</a></li>
-                                                            <li><a href="javascript:void(0)"><span class="text-danger">Delete project</span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END project-list-item -->
-
-                                        <!-- BEGIN project-list-item -->
-                                        <div class="project-list-item">
-                                            <div class="project-item">
-                                                <div class="project-item-icon">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/symbol-defs.svg#project" />
-                                                    </svg>
-                                                </div>
-                                                <div class="project-item-desc">
-                                                    <div class="project-item-title">
-                                                        <a href="dashboard-project.html">Notifications, v12 </a>
-                                                    </div>
-                                                    <div class="clearfix">
-                                                        <div class="pull-left project-item-version">First Revision</div>
-                                                        <small class="pull-right project-item-date">May 21, 2017 11:26</small>
-                                                    </div>
-                                                </div>
-                                                <div class="project-item-tools">
-                                                    <div class="project-menu">
-                                                        <button class="project-menu-trigger">
-                                                            <svg class="icon">
-                                                                <use xlink:href="img/symbol-defs.svg#dots" />
-                                                            </svg>
-                                                        </button>
-                                                        <ul class="project-menu-list">
-                                                            <li><a href="javascript:void(0)">Rename</a></li>
-                                                            <li><a href="javascript:void(0)">Manage Revisions</a></li>
-                                                            <li><a href="javascript:void(0)"><span class="text-danger">Delete project</span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END project-list-item -->
+                                    <h3 class="title-h3 pull-left" style="margin: 0">Dashboard</h3>
+                                    <div class="pull-right">
+                                        <button class="btn btn-default ">Rename Stage</button>
+                                        <button class="btn btn-default"><span class="text-danger">Delete Stage</span></button>
                                     </div>
-                                    <!-- END project-list -->
                                 </div>
+                                <!-- END dashboard-head -->
+
+                                <!-- BEGIN dashboard-body -->
+                                <div class="dashboard-body">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <ul class="side-nav">
+                                                <li class="active">
+                                                    <a href="javascript:void(0)" class="project-item-desc">
+                                                        <div class="project-item-title">QC Release</div>
+                                                        <div class="project-item-version">2 Revisions</div>
+                                                    </a>
+                                                </li>
+                                                 <li>
+                                                    <a href="javascript:void(0)" class="project-item-desc">
+                                                        <div class="project-item-title">Dev Stage</div>
+                                                        <div class="project-item-version">11 Revisions</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-sm-9">
+                                            <!-- BEGIN project-list -->
+                                            <div class="project-list">
+                                                <!-- BEGIN project-list-item -->
+                                                <div class="project-list-item">
+                                                    <div class="stage-item">
+                                                        <div class="stage-item-title">
+                                                            <a href="javascript:void(0)">April 20, 2017 17:58</a>
+                                                        </div>
+                                                        <div class="stage-item-tools">
+                                                            <button class="stage-btn delete" type="button" title="delete">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="img/symbol-defs.svg#trash" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- END project-list-item -->
+
+                                                <!-- BEGIN project-list-item -->
+                                                <div class="project-list-item">
+                                                    <div class="stage-item">
+                                                        <div class="stage-item-title">
+                                                            <a href="javascript:void(0)">April 20, 2017 17:58</a>
+                                                        </div>
+                                                        <div class="stage-item-tools">
+                                                            <button class="stage-btn delete" type="button" title="delete">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="img/symbol-defs.svg#trash" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- END project-list-item -->
+                                            </div>
+                                            <!-- END project-list -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END dashboard-body -->
                             </div>
+                            <!-- END dashboard -->
                         </div>
-                        <!-- END dashboard-body -->
                     </div>
-                    <!-- END dashboard -->
                 </div>
             </div>
         </div>

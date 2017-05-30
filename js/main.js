@@ -249,6 +249,42 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 
 
 /**
+ * Project menu
+ */
+(function(global) {
+    var MENU_SELECTOR = '.project-menu';
+    var TRIGGER_SELECTOR = '.project-menu-trigger';
+
+    function init() {
+        var $triggers = $(TRIGGER_SELECTOR);
+        if (!$triggers.length) return;
+
+        $(document).on('click', TRIGGER_SELECTOR, function(e) {
+            var $menu = $(e.target)
+                .closest(MENU_SELECTOR)
+                .toggleClass('open');
+        });
+
+        $(document).on('click', function(e) {
+            var $menu = $(e.target).closest(MENU_SELECTOR);
+            if ($menu.length && $menu.get(0).contains(e.target)) {
+                $(MENU_SELECTOR)
+                    .not($menu)
+                    .removeClass('open');
+            } else {
+                $(MENU_SELECTOR)
+                    .removeClass('open');
+            }
+        })
+    }
+
+    global.projectMenuModule = {
+        init: init
+    }
+})(window);
+
+
+/**
  * init scripts
  */
 $(function() {
@@ -259,4 +295,5 @@ $(function() {
     window.formsModule && window.formsModule.init();
     window.passwordsInputsModule && window.passwordsInputsModule.init();
     window.menuModule && window.menuModule.init();
+    window.projectMenuModule && window.projectMenuModule.init();
 });
