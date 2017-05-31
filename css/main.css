@@ -78,6 +78,15 @@ body {
     border-color: transparent;
 }
 
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: 0;
+    }
+
 .btn-lg {
     padding: 18px 34px;
     font-size: 18px;
