@@ -45,9 +45,8 @@
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <span class="icon-bar top"></span>
+                        <span class="icon-bar bottom"></span>
                     </button>
                     <a href="/" class="navbar-brand" title="Online SQL Database Modeller Logo">
                         <img class="logo" src="img/logo.svg" alt="Online SQL Database Modeller Logo" width="63" height="63" onerror="this.src='img/logo.png'; this.onerror=null;">
@@ -62,6 +61,7 @@
                     </ul>
                     <div class="navbar-right">
                         <a class="btn btn-link" href="#sign-in" data-toggle="modal">Log in</a>
+                        <br class="navbar-right-separator">
                         <a class="btn btn-primary" href="#sign-up" data-toggle="modal">Sign up</a>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                         <h1 class="title-h1">Online SQL Database Modeller</h1>
                         <p class="product-desc">
                             The best tool for online database modeling for
-                            <br>
+                            <br class="hidden-xs">
                             SQL developers, DBA, DW developers
                         </p>
                         <p class="cta-block">
@@ -254,7 +254,7 @@
                 <div class="row">
                     <div class="col-sm-5 col-xs-6">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-xs-6">
                                 <h4 class="page-footer-title">Info</h4>
                                 <ul class="page-footer-list">
                                     <li><a href="">Plans & Pricing</a></li>
@@ -263,7 +263,7 @@
                                     <li><a href="">About</a></li>
                                 </ul>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-xs-6">
                                 <h4 class="page-footer-title">Help</h4>
                                 <ul class="page-footer-list">
                                     <li><a href="">Tutorials </a></li>
@@ -276,7 +276,7 @@
                     </div>
                     <div class="col-sm-7 col-xs-6 text-right">
                         <h4 class="page-footer-title">Follow Us</h4>
-                        <ul class="social-list clearfix">
+                        <ul class="social-list">
                             <li>
                                 <a href="#" title="youtube">
                                     <svg class="icon">
@@ -303,15 +303,17 @@
 
     <!-- BEGIN sign in -->
     <div class="auth-block modal" id="sign-in" tabindex="-1" role="dialog">
-        <div class="container auth-block-inner">
-            <div class="auth-header clearfix">
-                <a class="pull-left" href="#">
-                    <img class="logo" src="img/logo.svg" alt="Online SQL Database Modeller Logo" width="63" height="63" onerror="this.src='img/logo.png'; this.onerror=null;">
-                </a>
-                <button class="pull-right auth-close" type="button" data-dismiss="modal" aria-label="Close"></button>
+        <div class="auth-block-inner">
+            <div class="auth-header">
+                <div class="auth-block-wrapper clearfix">
+                    <a class="pull-left" href="#">
+                        <img class="logo" src="img/logo.svg" alt="Online SQL Database Modeller Logo" width="63" height="63" onerror="this.src='img/logo.png'; this.onerror=null;">
+                    </a>
+                    <button class="pull-right auth-close" type="button" data-dismiss="modal" aria-label="Close"></button>
+                </div>
             </div>
             <div class="auth-body">
-               <div class="auth-body-wrap">
+               <div class="auth-block-wrapper auth-body-wrap">
                     <form method="POST" action="/">
                        <h3 class="auth-title">Sign in</h3>
                        <input type="email" class="form-control" placeholder="Email">
@@ -343,7 +345,7 @@
                </div>
             </div>
             <div class="auth-foot">
-                <div class="auth-foot-inner">
+                <div class="auth-block-wrapper auth-foot-inner">
                     Don't have an account? <a href="#sign-up" data-toggle="modal">Register</a>
                 </div>
             </div>
@@ -353,15 +355,17 @@
 
     <!-- BEGIN sign up -->
     <div class="auth-block modal" id="sign-up" tabindex="-1" role="dialog">
-        <div class="container auth-block-inner">
-            <div class="auth-header clearfix">
-                <a class="pull-left" href="#">
-                    <img class="logo" src="img/logo.svg" alt="Online SQL Database Modeller Logo" width="63" height="63" onerror="this.src='img/logo.png'; this.onerror=null;">
-                </a>
-                <button class="pull-right auth-close" type="button" data-dismiss="modal" aria-label="Close"></button>
+        <div class="auth-block-inner">
+            <div class="auth-header">
+               <div class="auth-block-wrapper clearfix">
+                    <a class="pull-left" href="#">
+                       <img class="logo" src="img/logo.svg" alt="Online SQL Database Modeller Logo" width="63" height="63" onerror="this.src='img/logo.png'; this.onerror=null;">
+                   </a>
+                   <button class="pull-right auth-close" type="button" data-dismiss="modal" aria-label="Close"></button>
+               </div>
             </div>
             <div class="auth-body">
-                <div class="auth-body-wrap">
+                <div class="auth-block-wrapper auth-body-wrap">
                     <form method="POST" action="/">
                         <h3 class="auth-title">Register</h3>
                         <input type="email" class="form-control" placeholder="Email">
@@ -408,7 +412,7 @@
                 </div>
             </div>
             <div class="auth-foot">
-                <div class="auth-foot-inner">
+                <div class="auth-block-wrapper auth-foot-inner">
                     Already have an account? <a href="#sign-in" data-toggle="modal">Sign in</a>
                 </div>
             </div>
