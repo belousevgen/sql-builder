@@ -731,19 +731,15 @@ body {
     margin-bottom: 65px;
 }
 
+.features-tabs-holder {
+    overflow: hidden;
+}
+
 .features-tabs {
-    margin-bottom: 35px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
-    justify-content: space-between;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-    border-bottom-color: #e2e2e2;
+    margin: 0 -26px;
+    overflow: hidden;
+    border: 0;
+    font-size: 0;
 }
 
     .features-tabs:before,
@@ -755,19 +751,23 @@ body {
     .features-tabs > li {
         margin-bottom: 0;
         float: none;
-        display: inline-block;
+        display: inline;
         vertical-align: top;
-        text-align: center;
     }
 
         .features-tabs > li > a {
+            margin: 0;
+            display: inline-block;
+            vertical-align: top;
             width: 174px;
+            width: 20%;
             height: 96px;
+            padding: 52px 26px 0;
             border: 0;
-            padding: 52px 0 0;
             background: transparent;
-            color: #666;
+            text-align: center;
             font-size: 15px;
+            color: #666;
             transition: 0.2s;
         }
 
@@ -783,6 +783,8 @@ body {
 
             .features-tabs > li > a:before {
                 top: auto;
+                left:  50%;
+                right: 50%;
                 border-top: 3px solid transparent;
                 transition: 0.2s;
             }
@@ -797,33 +799,10 @@ body {
             }
 
                 .features-tabs > li.active > a:before {
+                    left:  26px;
+                    right: 26px;
                     border-top-color: #3ea8de;
                 }
-
-        .features-tabs.scrollable {
-            overflow-x: auto;
-            background:
-                radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center,
-                radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
-            background-size: 10px 100%, 10px 100%;
-            background-attachment: scroll, scroll;
-            background-repeat: no-repeat;
-        }
-
-            .features-tabs.scrollable > li:first-child {
-                background-image:
-                    linear-gradient(to right, rgba(242,242,242, 1) 50%, rgba(242,242,242, 0) 100%);
-                background-repeat: no-repeat;
-                background-size: 20px 100%;
-            }
-
-            .features-tabs.scrollable > li:last-child {
-                background-image:
-                    linear-gradient(to left, rgba(242,242,242, 1) 50%, rgba(242,242,242, 0) 100%);
-                background-repeat: no-repeat;
-                background-position: 100% 0;
-                background-size: 20px 100%;
-            }
 
         .icon {
           display: inline-block;
@@ -869,8 +848,121 @@ body {
             pointer-events: none;
         }
 
+.features-tabs .tab-pane {
+    display: none;
+    float: left;
+    width: 100%;
+    padding: 35px 26px 0;
+    border-top: 1px solid #e2e2e2;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+    .features-tabs .active .tab-pane {
+        display: block;
+    }
+
 .features-section .tab-content {
     line-height: 1.6;
+}
+
+.tab-toggle {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .features-tabs {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .features-tabs > li {
+        display: block;
+    }
+
+        .features-tabs > li + li {
+            margin-top: -1px;
+        }
+
+        .features-tabs > li > a {
+            display: block;
+            width: auto;
+            border: 1px solid #e2e2e2;
+            border-width: 1px 0;
+            height: 64px;
+            line-height: 64px;
+            padding: 0;
+            text-align: left;
+        }
+
+            .features-tabs > li.active > a,
+            .features-tabs > li > a:hover,
+            .features-tabs > li.active > a:hover,
+            .features-tabs > li.active > a:focus {
+                border: 1px solid #e2e2e2;
+                border-width: 1px 0;
+            }
+
+            .features-tabs > li > a:before {
+                content: none;
+            }
+
+    .features-tabs .icon {
+        right: auto;
+        bottom: 0;
+        transform: scale(0.65);
+    }
+
+    .features-tabs .tab-pane {
+        float: none;
+        padding: 14px 0 24px;
+        font-size: 13px;
+        border: 0;
+    }
+
+    .features-tabs > li > a,
+    .features-tabs .tab-pane {
+        padding-left: 55px;
+    }
+
+    .tab-toggle {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: block;
+        font-size: 12px;
+        width:  1em;
+        height: 1em;
+        transition: .2s linear;
+    }
+
+        .tab-toggle:before,
+        .tab-toggle:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 2px;
+            background: #999;
+        }
+
+            .tab-toggle:after {
+                width: 2px;
+                height: 100%;
+            }
+
+        .active .tab-toggle {
+            -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+        }
 }
 
 .coming-features {

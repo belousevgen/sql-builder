@@ -291,7 +291,7 @@ $(function() {
     window.headerModule && window.headerModule.init();
     window.parallaxImageModule && window.parallaxImageModule.init();
     window.scrollRevealModule && window.scrollRevealModule.init();
-    window.tabsModule && window.tabsModule.init();
+    // window.tabsModule && window.tabsModule.init();
     window.formsModule && window.formsModule.init();
     window.passwordsInputsModule && window.passwordsInputsModule.init();
     window.menuModule && window.menuModule.init();
