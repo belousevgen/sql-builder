@@ -872,6 +872,14 @@ body {
 }
 
 @media (max-width: 767px) {
+    .features-section {
+        padding: 24px 0;
+    }
+
+    .features-section .title-h1 {
+        margin: 0 0 21px;
+    }
+
     .features-tabs {
         margin-left: 0;
         margin-right: 0;
@@ -1019,6 +1027,10 @@ body {
         }
 
 @media (max-width: 767px) {
+    .coming-features {
+        padding-top: 0;
+    }
+
     .coming-features ul:after {
         margin-top: 16px;
     }
@@ -1036,6 +1048,11 @@ body {
         .coming-features li + li {
             margin-top: 26px;
         }
+
+    .coming-features .btn {
+        adding: 13px 35px 12px;
+        font-size: 15px;
+    }
 }
 
 
